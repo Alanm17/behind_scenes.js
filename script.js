@@ -7,22 +7,22 @@
  console.log(output);
 
  if(birthYear >= 1981 && birthYear <= 1996){
+     var Millenial = true;
      const firstName = 'steven';
+
+     // Reasssigning outer scope's variable
+     output = 'NEW OUTPUT!';
+     
     const str = ` oh you are a millenial, ${firstName}`
-    var Millenial = true;
     console.log(str);
- }
- function add(a,b){
-    return a + b;
+
+    function add(a,b){
+       return a + b;
  }
 
- output = 'NEw output '
- console.log(Millenial);
-//  console.log(add(3,4));
-
- 
- 
-  
+ }
+console.log(Millenial);
+console.log(output);
  }
  printAge()
  return age;
