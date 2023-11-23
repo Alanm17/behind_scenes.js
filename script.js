@@ -43,8 +43,8 @@ const year = 1991;
 
 // function decloration
 console.log(addDecl(2,5));
-console.log(addExp(2,7));
-console.log(addArrow(2,5));
+// console.log(addExp(2,7));
+// console.log(addArrow(2,5));
 
 
 function addDecl (a,b){
@@ -56,6 +56,22 @@ return a + b;
 }
 
 const addArrow = (a,b) => a+b;
+console.log(numProducts);
+
+if (!numProducts) deleteShoppingCart();
+var numProducts = 10;
+function deleteShoppingCart(){
+    console.log('All produts have been deleted');  
+}
+
+var x = 1;
+let y = 2;
+const z = 3;
+
+console.log(x === window.x);
+console.log(y === window.y);
+console.log(z === window.z);
+
 // // function lcAge(birthYear) {
 // //   const age = 2037 - birthYear;
 
