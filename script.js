@@ -1,76 +1,76 @@
 'use strict';
-//  function calCage(birthYear){
-//  const age = 2037 - birthYear;
+// //  function calCage(birthYear){
+// //  const age = 2037 - birthYear;
 
-//  function printAge(){
-//  let output = `${firstName},you are ${age},born in ${birthYear}`;
-//  console.log(output);
+// //  function printAge(){
+// //  let output = `${firstName},you are ${age},born in ${birthYear}`;
+// //  console.log(output);
 
-//  if(birthYear >= 1981 && birthYear <= 1996){
-//      var Millenial = true;
-//      const firstName = 'steven';
+// //  if(birthYear >= 1981 && birthYear <= 1996){
+// //      var Millenial = true;
+// //      const firstName = 'steven';
 
-//      // Reasssigning outer scope's variable
-//      output = 'NEW OUTPUT!';
+// //      // Reasssigning outer scope's variable
+// //      output = 'NEW OUTPUT!';
      
-//     const str = ` oh you are a millenial, ${firstName}`
-//     console.log(str);
+// //     const str = ` oh you are a millenial, ${firstName}`
+// //     console.log(str);
 
-//     function add(a,b){
-//        return a + b;
-//  }
+// //     function add(a,b){
+// //        return a + b;
+// //  }
 
-//  }
-// console.log(Millenial);
-// console.log(output);
-//  }
-//  printAge()
-//  return age;
-//  }
+// //  }
+// // console.log(Millenial);
+// // console.log(output);
+// //  }
+// //  printAge()
+// //  return age;
+// //  }
 
-//  const firstName = 'Mukhammadaziz';
-//  calCage(1991);
+// //  const firstName = 'Mukhammadaziz';
+// //  calCage(1991);
 
-// variables
-console.log(me);
-// console.log(teacher);
-// console.log(year);
+// // variables
+// console.log(me);
+// // console.log(teacher);
+// // console.log(year);
 
-var me ='Mukhammadaziz'
-let job ='teacher';
-const year = 1991;
-
-
-// function decloration
-console.log(addDecl(2,5));
-// console.log(addExp(2,7));
-// console.log(addArrow(2,5));
+// var me ='Mukhammadaziz'
+// let job ='teacher';
+// const year = 1991;
 
 
-function addDecl (a,b){
-    return a+b;
-}
+// // function decloration
+// console.log(addDecl(2,5));
+// // console.log(addExp(2,7));
+// // console.log(addArrow(2,5));
 
-const addExp = function(a,b){
-return a + b;
-}
 
-const addArrow = (a,b) => a+b;
-console.log(numProducts);
+// function addDecl (a,b){
+//     return a+b;
+// }
 
-if (!numProducts) deleteShoppingCart();
-var numProducts = 10;
-function deleteShoppingCart(){
-    console.log('All produts have been deleted');  
-}
+// const addExp = function(a,b){
+// return a + b;
+// }
 
-var x = 1;
-let y = 2;
-const z = 3;
+// const addArrow = (a,b) => a+b;
+// console.log(numProducts);
 
-console.log(x === window.x);
-console.log(y === window.y);
-console.log(z === window.z);
+// if (!numProducts) deleteShoppingCart();
+// var numProducts = 10;
+// function deleteShoppingCart(){
+//     console.log('All produts have been deleted');  
+// }
+
+// var x = 1;
+// let y = 2;
+// const z = 3;
+
+// console.log(x === window.x);
+// console.log(y === window.y);
+// console.log(z === window.z);
 
 // // function lcAge(birthYear) {
 // //   const age = 2037 - birthYear;
@@ -136,3 +136,28 @@ console.log(z === window.z);
 // function deleteAll (){
 //     console.log('everthing is deleted!');  
 // }
+
+  console.log(this);  
+  const calCage = function(birthYear){
+    console.log(2037 - birthYear);
+    console.log(this);
+  }
+  calCage(1991);
+
+//   Arrow
+  const calArrow = (birthYear) => {
+    console.log(2037 - birthYear);
+    console.log(this);
+  };
+  calCage(1991);
+
+  const jonas ={
+  Year: 1991,
+  job:'interprenour',
+  calCage: function(){
+    // console.log(this); 
+    
+    console.log(2037 - this.Year);
+}
+  }
+  jonas.calCage();
