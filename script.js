@@ -152,12 +152,23 @@
   calCage(1991);
 
   const jonas ={
-  Year: 1991,
+  year: 1991,
   job:'interprenour',
   calCage: function(){
     // console.log(this); 
     
-    console.log(2037 - this.Year);
+    console.log(2037 - this.year);
 }
   }
   jonas.calCage();
+
+
+  const matilda = {
+    year : 2017,
+  }
+
+  matilda.calCage = jonas.calCage;
+  matilda.calCage();
+
+  const f = jonas.calCage;
+  f()
