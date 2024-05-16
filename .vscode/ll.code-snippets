@@ -3,7 +3,7 @@
 		"scope": "javascript",
 		"prefix": "cl",
 		"body": [
-			"console.log($1);",
+			"console.log("");",
 			"$2"
 		],
 		"description": "Log output to the console"
