@@ -36,8 +36,8 @@ var agaim = true;
 
 // Hoisting with Functions************>
 console.log(ages(2, 3));
-console.log(dasr(4, 5));
-console.log(addArrow(3, 8));
+// console.log(dasr(4, 5));
+// console.log(addArrow(3, 8));
 // decloration
 function ages(a, b) {
   return a + b;
