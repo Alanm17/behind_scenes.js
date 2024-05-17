@@ -48,32 +48,49 @@
 // };
 // //Array
 // const addArrow = (a, b) => a + b;
-console.log(this);
-const calAge = function (birthYear) {
-  console.log(2024 - birthYear);
-  // console.log(this);
-};
-calAge(1991);
+// console.log(this);
+// const calAge = function (birthYear) {
+//   console.log(2024 - birthYear);
+//   // console.log(this);
+// };
+// calAge(1991);
 
-const arrowAge = birthYear => {
-  console.log(2024 - birthYear);
-  // console.log(this);
-};
+// const arrowAge = birthYear => {
+//   console.log(2024 - birthYear);
+//   // console.log(this);
+// };
 
-arrowAge(2003);
+// arrowAge(2003);
 
-const alan = {
-  year: 2003,
-  occupation: 'programmer',
-  calcAge: function () {
-    // console.log(this);
+// const alan = {
+//   year: 2003,
+//   occupation: 'programmer',
+//   calcAge: function () {
+//     // console.log(this);
+//   },
+// };
+// alan.calcAge();
+
+// let anna = {
+//   year: 2003,
+// };
+
+// anna.calcAge = alan.calcAge;
+// anna.calcAge();
+// const firstName = 'muhammad';
+const java = {
+  firstName: 'Alan2',
+  alan: {
+    firstName: 'Alan',
+    job: 'waiter',
+    salary: 3000,
+
+    sad: () => {
+      console.log(`hey ${this.firstName}`);
+    },
   },
 };
-alan.calcAge();
+java.alan.sad();
+// alan.sad();
 
-let anna = {
-  year: 2003,
-};
-
-anna.calcAge = alan.calcAge;
-anna.calcAge();
+console.log(this);
