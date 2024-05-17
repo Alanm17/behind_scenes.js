@@ -77,20 +77,47 @@
 
 // anna.calcAge = alan.calcAge;
 // anna.calcAge();
-// const firstName = 'muhammad';
-const java = {
-  firstName: 'Alan2',
-  alan: {
-    firstName: 'Alan',
-    job: 'waiter',
-    salary: 3000,
+let firstName = 'muhammad';
+const vasa = {
+  firstName: 'jahongir',
+  sad3() {
+    console.log(firstName);
+    firstName = 'alann';
+  },
+  java: {
+    firstName: 'Alan2',
+    alan: {
+      sad2() {
+        console.log(firstName);
+        firstName = 'alan';
+      },
+      firstName: 'Alan',
+      job: 'waiter',
+      salary: 3000,
 
-    sad: () => {
-      console.log(`hey ${this.firstName}`);
+      sad1: function () {
+        console.log(`hey ${firstName}`);
+      },
+      firstName: 'Alan',
     },
   },
 };
-java.alan.sad();
+vasa.sad3();
+vasa.java.alan.sad2();
+vasa.java.alan.sad1();
 // alan.sad();
 
-console.log(this);
+// console.log(this);
+const obj = {
+  // This will result in a syntax error
+  myMethod: function myMethod() {
+    console.log('This is a function declaration inside an object');
+  },
+};
+const exclaim = string => string + '!!!';
+const listen = string => 'Listen up! ' + string;
+const uppercase = string => string.toUpperCase();
+obj.myMethod();
+const text = 'Hello World';
+
+console.log(uppercase(exclaim(listen(text))));
