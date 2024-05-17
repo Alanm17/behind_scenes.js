@@ -81,14 +81,14 @@ let firstName = 'muhammad';
 const vasa = {
   firstName: 'jahongir',
   sad3() {
-    console.log(firstName);
+    console.log(this.firstName);
     firstName = 'alann';
   },
   java: {
     firstName: 'Alan2',
     alan: {
       sad2() {
-        console.log(firstName);
+        console.log(this.firstName);
         firstName = 'alan';
       },
       firstName: 'Alan',
@@ -96,15 +96,15 @@ const vasa = {
       salary: 3000,
 
       sad1: function () {
-        console.log(`hey ${firstName}`);
+        console.log(`hey ${this.firstName}`);
       },
       firstName: 'Alan',
     },
   },
 };
-vasa.sad3();
-vasa.java.alan.sad2();
 vasa.java.alan.sad1();
+vasa.java.alan.sad2();
+vasa.sad3();
 // alan.sad();
 
 // console.log(this);
