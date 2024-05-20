@@ -77,47 +77,103 @@
 
 // anna.calcAge = alan.calcAge;
 // anna.calcAge();
-let firstName = 'muhammad';
-const vasa = {
-  firstName: 'jahongir',
-  sad3() {
-    console.log(this.firstName);
-    firstName = 'alann';
-  },
-  java: {
-    firstName: 'Alan2',
-    alan: {
-      sad2() {
-        console.log(this.firstName);
-        firstName = 'alan';
-      },
-      firstName: 'Alan',
-      job: 'waiter',
-      salary: 3000,
+// let firstName = 'muhammad';
+// const vasa = {
+//   firstName: 'jahongir',
+//   sad3() {
+//     console.log(this.firstName);
+//     firstName = 'abdurahmon';
+//   },
+//   java: {
+//     firstName: 'Alan2',
+//     alan: {
+//       sad2() {
+//         console.log(this.firstName);
+//         console.log('i worked as');
+//         this.ishlagan.forEach(ish => {
+//           console.log(ish);
+//           firstName = 'alan';
+//         });
+//       },
+//       ishlagan: ['afitsant', 'programisz'],
+//       firstName: 'Alan',
+//       job: 'waiter',
+//       salary: 3000,
 
-      sad1: function () {
-        console.log(`hey ${this.firstName}`);
-      },
-      firstName: 'Alan',
-    },
+//       sad1: function () {
+//         console.log(`hey ${this.firstName}`);
+//       },
+//       firstName: 'Alan',
+//     },
+//   },
+// };
+// // vasa.java.alan.sad2();
+// vasa.java.alan.sad2();
+// vasa.sad3();
+// vasa.java.alan.sad1();
+// // alan.sad();
+// const sbaz = {
+//   name: 'alan',
+//   java: this.name,
+//   fun: function () {
+//     console.log(this.java);
+//   },
+// };
+// sbaz.fun();
+// // console.log(this);
+// const obj = {
+//   // This will result in a syntax error
+//   myMethod: function myMethod() {
+//     console.log('This is a function declaration inside an object');
+//   },
+// };
+// const exclaim = string => string + '!!!';
+// const listen = string => 'Listen up! ' + string;
+// const uppercase = string => string.toUpperCase();
+// obj.myMethod();
+// const text = 'Hello World';
+
+// console.log(uppercase(exclaim(listen(text))));
+// this.alert('hello');
+// var java = 'easy';
+// let sabzi = {
+//   fanc1: function () {
+//     console.log(this);
+//     let java = 'complex';
+//     const fanc2 = function () {
+//       const fanc3 = function () {
+//         let java = 'alan';
+//         console.log(this.java);
+//       };
+//       // fanc3();
+//     };
+//     // fanc2();
+//   },
+// };
+// sabzi.fanc1();
+// // fanc1();
+// // fanc1.fanc2.fanc3();
+
+// // let a = null;
+// // console.log(typeof a);
+
+// // \"this " in objects show the object head which is  B here and "this" keyword is used to select the user inside its object because if we use the user name itself and try to select keys inside init it does not work
+const v = {
+  a: 'toy',
+  c: function () {
+    console.log(this.a);
   },
 };
-vasa.java.alan.sad1();
-vasa.java.alan.sad2();
-vasa.sad3();
-// alan.sad();
-
-// console.log(this);
-const obj = {
-  // This will result in a syntax error
-  myMethod: function myMethod() {
-    console.log('This is a function declaration inside an object');
+// v.c();
+const a = 'game';
+const b = {
+  a: 'toy',
+  c: () => {
+    // const innerFunc = function () {
+    console.log(this.a); // this refers to the outer function's this, which is b
+    // };
+    // innerFunc();
   },
 };
-const exclaim = string => string + '!!!';
-const listen = string => 'Listen up! ' + string;
-const uppercase = string => string.toUpperCase();
-obj.myMethod();
-const text = 'Hello World';
 
-console.log(uppercase(exclaim(listen(text))));
+b.c(); // Logs 'toy'
