@@ -229,3 +229,5 @@ console.log(oldMe.firstName);
 // if we change inner objects in the copied parent object the orginal object's inner objects also change as inner object is deeply assigned object
 const copy = Object.assign({}, me);
 copy.age = 23;
+
+//end of behind the scenes
