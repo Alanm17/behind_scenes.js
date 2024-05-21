@@ -206,18 +206,26 @@
 // me.this();
 //Primitive Values ex:
 /// here primitive types are being changed totally as they create new address once they are copied
+// and they are kept in different value addresses in call stack ex: first 0001  after copied 0002
 let lastName = 'Kholdarov';
 let lastOldName = lastName;
 lastOldName = 'Nematjon Ugli';
 console.log(lastOldName, lastName);
-//Referencevalues Ex:
-const me = {
+//Reference types Ex:
+let me = {
   firstName: 'Alan',
   lastName: 'Kholdarov',
   age: 21,
 };
-// here the same object is just pointing the another with just another name
-const oldMe = me;
+// here the same object is just pointing the another with just another name and they hold the same value adress in the heap ex:first  0003 after copied  0003 same address
+let oldMe = me;
 oldMe.firstName = 'Mukhammadaziz';
 console.log(me.firstName);
 console.log(oldMe.firstName);
+
+// In order to copy to new  address , here we can do shallow copying using Object.assign({}, objectName);
+// in this it copied the object .  However it only copies the top level properties and if there
+// if there is an inner object in it {arrays object etc} they are not changed and if we change the
+// if we change inner objects in the copied parent object the orginal object's inner objects also change as inner object is deeply assigned object
+const copy = Object.assign({}, me);
+copy.age = 23;
