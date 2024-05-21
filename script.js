@@ -158,51 +158,66 @@
 // // console.log(typeof a);
 
 // // \"this " in objects show the object head which is  B here and "this" keyword is used to select the user inside its object because if we use the user name itself and try to select keys inside init it does not work
-const v = {
-  a: 'toy',
-  c: function () {
-    console.log(this.a);
-  },
-};
-// v.c();
-const a = 'game';
-const b = {
-  a: 'toy',
-  c: () => {
-    // const innerFunc = function () {
-    console.log(this.a); // this refers to the outer function's this, which is b
-    // };
-    // innerFunc();
-  },
-};
-const year = 1221;
-b.c(); // Logs 'toy'
-const jonas = {
-  firstName: 'Jonas',
-  year: 1991,
-  calcAge: function () {
-    console.log(this);
-    console.log(2037 - this.year);
+// const v = {
+//   a: 'toy',
+//   c: function () {
+//     console.log(this.a);
+//   },
+// };
+// // v.c();
+// const a = 'game';
+// const b = {
+//   a: 'toy',
+//   c: () => {
+//     // const innerFunc = function () {
+//     console.log(this.a); // this refers to the outer function's this, which is b
+//     // };
+//     // innerFunc();
+//   },
+// };
+// const year = 1221;
+// b.c(); // Logs 'toy'
+// const jonas = {
+//   firstName: 'Jonas',
+//   year: 1991,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2037 - this.year);
 
-    // Self-reference for inner function
-    // const this = this;
-    const isMillenial = () => {
-      console.log(this);
-      console.log(this.year >= 1981 && this.year <= 1996);
-    };
-    isMillenial();
-  },
-};
+//     // Self-reference for inner function
+//     // const this = this;
+//     const isMillenial = () => {
+//       console.log(this);
+//       console.log(this.year >= 1981 && this.year <= 1996);
+//     };
+//     isMillenial();
+//   },
+// };
 
-jonas.calcAge();
-const firstName = 'Alan';
+// jonas.calcAge();
+// const firstName = 'Alan';
+// const me = {
+//   name: firstName,
+//   this: function () {
+//     console.log(this.name);
+//   },
+//   //  this()
+// };
+// me.this();
+//Primitive Values ex:
+/// here primitive types are being changed totally as they create new address once they are copied
+let lastName = 'Kholdarov';
+let lastOldName = lastName;
+lastOldName = 'Nematjon Ugli';
+console.log(lastOldName, lastName);
+//Referencevalues Ex:
 const me = {
-  name: firstName,
-  this: function () {
-    console.log(this.name);
-  },
-  //  this()
+  firstName: 'Alan',
+  lastName: 'Kholdarov',
+  age: 21,
 };
-me.this();
-
-let last;
+// here the same object is just pointing the another with just another name
+const oldMe = me;
+oldMe.firstName = 'Mukhammadaziz';
+console.log(me.firstName);
+console.log(oldMe.firstName);
