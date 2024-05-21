@@ -175,5 +175,34 @@ const b = {
     // innerFunc();
   },
 };
-
+const year = 1221;
 b.c(); // Logs 'toy'
+const jonas = {
+  firstName: 'Jonas',
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+
+    // Self-reference for inner function
+    // const this = this;
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
+  },
+};
+
+jonas.calcAge();
+const firstName = 'Alan';
+const me = {
+  name: firstName,
+  this: function () {
+    console.log(this.name);
+  },
+  //  this()
+};
+me.this();
+
+let last;
